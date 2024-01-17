@@ -14,7 +14,6 @@ function comprimeImgs(){
 function comprimeJs(){
     return gulp.src('./src/main.js')
     .pipe(uglify())
-    .pipe(obfuscate())
     .pipe(gulp.dest('./dist/'));
 }
 

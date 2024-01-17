@@ -1,7 +1,6 @@
 {
   "name": "landing_-page___we_were_soldiers",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "gulp": "gulp",
@@ -17,5 +16,6 @@
     "gulp-sourcemaps": "^3.0.0",
     "gulp-uglify": "^3.0.2",
     "sass": "^1.69.7"
-  }
+  },
+  "description": ""
 }
