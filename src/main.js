@@ -21,13 +21,13 @@ $(document).ready(function(){
 
     tabs.each(function(index, tab){
         $(tab).on('click', function(){
-            tabs.removeClass('active');
-            $(this).addClass('active');
+            tabs.removeClass('tabButton--active');
+            $(this).addClass('tabButton--active');
 
             slides.each(function(){
-                $(this).removeClass('active');
+                $(this).removeClass('slides__group--active');
             });
-            slides.eq(index).addClass('active');
+            slides.eq(index).addClass('slides__group--active');
         });
     });
 
