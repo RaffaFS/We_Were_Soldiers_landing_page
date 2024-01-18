@@ -1,3 +1,24 @@
+//variaveis
+
+$backgroundColor: rgb(20,20,20);
+$primaryColor: #fff;
+$secondaryColor: rgb(255,200,0);
+$terciaryColor: rgb(180,180,180);
+
+$fontLarger: 64px;
+$fontLarge: 40px;
+$fontMedium: 32px;
+$fontSmall: 28px;
+$fontSmaller: 24px;
+
+$fontLargerMobile: 48px;
+$fontLargeMobile: 28px;
+$fontMediumMobile: 24px;
+$fontSmallMobile: 20px;
+$fontSmallerMobile: 16px;
+
+//variaveis
+
 *{
     padding: 0;
     margin: 0;
@@ -7,7 +28,7 @@
 }
 
 body{
-    background-color: rgb(20, 20, 20);
+    background-color: $backgroundColor;
 }
 
 .hero{
@@ -23,14 +44,26 @@ body{
         justify-content: end;
         padding: 32px 6vw;
 
+        @media (max-width: 767px){
+            padding: 4px 4vw;
+        }
+
         li{
             padding-left: 48px;
 
+            @media (max-width: 767px){
+                padding-left: 16px;
+            }
+
             a{
-                font-size: 24px;
-                color: white;
-                border-bottom: white solid 3px;
+                font-size: $fontSmaller;
+                color: $primaryColor;
+                border-bottom: $primaryColor solid 3px;
                 border-radius: 6px;
+
+                @media (max-width: 767px){
+                    font-size: $fontSmallerMobile;
+                }
             }
         }
     }
@@ -38,13 +71,25 @@ body{
     &__phrase{
         margin-top: 44vh;
         margin-left: 6vw;
+
+        @media (max-width: 1366px){
+            margin-top: 24vh;
+        }
+
+        @media (max-width: 767px){
+            margin-top: 16vh;
+        }
     }
 
     p{
         font-family: 'Playfair Display', serif;
-        font-size: 28px;
-        color: white;
+        font-size: $fontSmall;
+        color: $primaryColor;
         padding-top: 16px;
+
+        @media (max-width: 767px){
+            font-size: $fontSmallerMobile;
+        }
     }
 
     button{
@@ -55,14 +100,26 @@ body{
             margin-left: 6vw;
             margin-top: 32px;
             display: flex;
-            border: solid rgb(255, 200, 0) 4px;
-            color: rgb(255, 200, 0);
+            border: solid $secondaryColor 4px;
+            color: $secondaryColor;
             align-items: center;
-            font-size: 40px;
+            font-size: $fontLarge;
+
+            @media (max-width: 767px){
+                margin-left: 0;
+            }
 
             i, h6{
                 padding: 4px 8px;
+
+                @media (max-width: 767px){
+                    padding: 2px 4px;
+                }
             }
+        }
+
+        @media (max-width: 767px){
+            transform: scale(0.7);
         }
     }
 }
@@ -71,11 +128,15 @@ body{
     display: flex;
     justify-content: space-around;
     margin-top: 16px;
-    padding-bottom: 6vw;
+    padding-bottom: 12vw;
+
+    @media (max-width: 767px){
+        display: none;
+    }
 }
 
 .slides{
-    width: 1080px;
+    width: 1600px;
     margin: 16px auto;
 
     &__group{
@@ -85,30 +146,56 @@ body{
             display: block;
         }
     }
+
+    @media (max-width: 1366px){
+        width: 720px;
+    }
+
+    @media (max-width: 767px){
+        width: 240px;
+        margin: 0 auto;
+    }
 }
 
 .castCrew{
 
     h2{
-        font-size: 64px;
-        color: white;
+        font-size: $fontLarger;
+        color: $primaryColor;
         margin-left: 6vw;
         margin-top: 2vw;
+
+        @media (max-width: 767px){
+            font-size: $fontLargerMobile;
+            margin-top: 6vh;
+            text-align: center;;
+            margin-left: 0;
+        }
     }
 
     h4{
-        font-size: 32px;
-        color: rgb(255, 200, 0);
+        font-size: $fontMedium;
+        color: $secondaryColor;
         margin-left: 6vw;
+
+        @media (max-width: 767px){
+            font-size: $fontMediumMobile;
+            text-align: center;
+            margin-left: 0;
+        }
     }
 
     h3{
-        font-size: 32px;
+        font-size: $fontMedium;
         font-weight: lighter;
         text-align: center;
         padding-bottom: 4px;
         text-transform: uppercase;
-        color: white;
+        color: $primaryColor;
+
+        @media (max-width: 767px){
+            font-size: $fontMediumMobile;
+        }
     }
 
     &__nav{
@@ -123,11 +210,15 @@ body{
                 margin: 0 8px;
                 background-color: transparent;
                 border: none;
-                color: rgb(180, 180, 180);
-                font-size: 24px;
+                color: $terciaryColor;
+                font-size: $fontSmaller;
+
+                @media (max-width: 767px){
+                    font-size: $fontSmallerMobile;
+                }
 
                 &--active{
-                    color: white;
+                    color: $primaryColor;
                 }
             }
 
@@ -143,41 +234,94 @@ body{
     background-size: contain;
     background-repeat: no-repeat;
 
+    @media (max-width: 767px){
+        background-image: url(images/la_drang_mobile.jpg);
+    }
+
     &__content{
         margin: 0 6vw;
-        padding-top: 2vw;
+        padding-top: 12vw;
         padding-bottom: 9vw;
         display: flex;
 
+        @media (max-width: 1366px){
+            align-items: center;
+        }
+
+        @media (max-width: 767px){
+            align-items: center;
+        }
+
         &__text{
             h2{
-                color: white;
-                font-size: 64px;
+                color: $primaryColor;
+                font-size: $fontLarger;
+
+                @media (max-width: 1366px){
+                    text-align: center;
+                }
+
+                @media (max-width: 767px){
+                    font-size: $fontLargerMobile;
+                    text-align: center;
+                }
             }
             
             h4{
-                color: rgb(255, 200, 0);
-                font-size: 32px;
+                color: $secondaryColor;
+                font-size: $fontMedium;
                 margin-bottom: 32px;
+
+                @media (max-width: 1366px){
+                    font-size: $fontMedium;
+                    text-align: center;
+                }
+
+                @media (max-width: 767px){
+                    font-size: $fontMediumMobile;
+                    text-align: center;
+                }
             }
     
             p{
-                color: rgb(180, 180, 180);
-                font-size: 24px;
+                color: $terciaryColor;
+                font-size: $fontSmaller;
                 font-family: 'Playfair Display', serif;
                 margin-top: 16px;
     
                 strong{
-                    color: white;
+                    color: $primaryColor;
                     font-family: 'Playfair Display', serif;
                 }
+
+                @media (max-width: 1366px){
+                    text-align: justify;
+                }
+
+                @media (max-width: 767px){
+                    font-size: $fontSmallerMobile;
+                    text-align: justify;
+                }
+            }
+
+            @media (max-width: 1366px){
+                margin-top: 4vh;
+                margin-bottom: 2vh;
+            }
+
+            @media (max-width: 767px){
+                margin-top: 10vh;
+                margin-bottom: 5vh;
             }
         } 
 
         img{
-            height: 660px;
+            height: 720px;
             margin-left: 8vw ;
-            margin-top: 2vw;
+
+            @media (max-width: 1366px){
+                display: none;
+            }
         }
     }
 }
@@ -201,5 +345,5 @@ body{
 }
 
 .slick-prev:before, .slick-next:before{
-    color: rgb(255, 200, 0);
+    color: $secondaryColor;
 }
