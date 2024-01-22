@@ -17,6 +17,12 @@ $fontMediumMobile: 24px;
 $fontSmallMobile: 20px;
 $fontSmallerMobile: 16px;
 
+$fontLarger4k: 120px;
+$fontLarge4k: 72px;
+$fontMedium4k: 60px;
+$fontSmall4k: 48px;
+$fontSmaller4k: 42px;
+
 //variaveis
 
 *{
@@ -64,6 +70,10 @@ body{
                 @media (max-width: 767px){
                     font-size: $fontSmallerMobile;
                 }
+
+                @media (min-width: 2560px){
+                    font-size: $fontSmaller4k;
+                }
             }
         }
     }
@@ -89,6 +99,10 @@ body{
 
         @media (max-width: 767px){
             font-size: $fontSmallerMobile;
+        }
+
+        @media (min-width: 2560px){
+            font-size: $fontSmaller4k;
         }
     }
 
@@ -136,7 +150,8 @@ body{
 }
 
 .slides{
-    width: 1600px;
+    max-width: 1600px;
+    width: 100%;
     margin: 16px auto;
 
     &__group{
@@ -147,8 +162,8 @@ body{
         }
     }
 
-    @media (max-width: 1366px){
-        width: 720px;
+    @media (max-width: 1440px){
+        width: 90%;
     }
 
     @media (max-width: 767px){
@@ -171,6 +186,10 @@ body{
             text-align: center;;
             margin-left: 0;
         }
+
+        @media (min-width: 2560px){
+            font-size: $fontLarger4k;
+        }
     }
 
     h4{
@@ -182,6 +201,10 @@ body{
             font-size: $fontMediumMobile;
             text-align: center;
             margin-left: 0;
+        }
+
+        @media (min-width: 2560px){
+            font-size: $fontMedium4k;
         }
     }
 
@@ -195,6 +218,10 @@ body{
 
         @media (max-width: 767px){
             font-size: $fontMediumMobile;
+        }
+
+        @media (min-width: 2560px){
+            font-size: $fontMedium4k;
         }
     }
 
@@ -215,6 +242,10 @@ body{
 
                 @media (max-width: 767px){
                     font-size: $fontSmallerMobile;
+                }
+
+                @media (min-width: 2560px){
+                    font-size: $fontSmaller4k;
                 }
 
                 &--active{
@@ -243,6 +274,7 @@ body{
         padding-top: 12vw;
         padding-bottom: 9vw;
         display: flex;
+        align-items: center;
 
         @media (max-width: 1366px){
             align-items: center;
@@ -265,6 +297,10 @@ body{
                     font-size: $fontLargerMobile;
                     text-align: center;
                 }
+
+                @media (min-width: 2560px){
+                    font-size: $fontLarger4k;
+                }
             }
             
             h4{
@@ -275,6 +311,10 @@ body{
                 @media (max-width: 1366px){
                     font-size: $fontMedium;
                     text-align: center;
+                }
+
+                @media (min-width: 2560px){
+                    font-size: $fontMedium4k;
                 }
 
                 @media (max-width: 767px){
@@ -302,6 +342,10 @@ body{
                     font-size: $fontSmallerMobile;
                     text-align: justify;
                 }
+                
+                @media (min-width: 2560px){
+                    font-size: $fontSmaller4k;
+                }
             }
 
             @media (max-width: 1366px){
@@ -321,6 +365,10 @@ body{
 
             @media (max-width: 1366px){
                 display: none;
+            }
+
+            @media (min-width: 2560px){
+                height: 840px;
             }
         }
     }
