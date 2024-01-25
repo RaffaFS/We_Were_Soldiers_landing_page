@@ -16,20 +16,20 @@ $(document).ready(function(){
         }, 500);
     });
 
-    const tabs = $('.tabButton');
-    const slides = $('.slides__group');
-
-    tabs.each(function(index, tab){
-        $(tab).on('click', function(){
-            tabs.removeClass('tabButton--active');
-            $(this).addClass('tabButton--active');
-
-            slides.each(function(){
-                $(this).removeClass('slides__group--active');
-            });
-            slides.eq(index).addClass('slides__group--active');
-        });
-    });
+//    const tabs = $('.tabButton');
+//    const slides = $('.slides__group');
+//
+//    tabs.each(function(index, tab){
+//        $(tab).on('click', function(){
+//            tabs.removeClass('tabButton--active');
+//            $(this).addClass('tabButton--active');
+//
+//            slides.each(function(){
+//                $(this).removeClass('slides__group--active');
+//            });
+//            slides.eq(index).addClass('slides__group--active');
+//        });
+//    });                                                               Linhas para troca de abas
 
     $('.slides__group').slick({
         centerMode: true,

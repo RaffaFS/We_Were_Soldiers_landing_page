@@ -155,7 +155,7 @@ body{
     margin: 16px auto;
 
     &__group{
-        display: none;
+        display: hidden;
 
         &--active{
             display: block;
